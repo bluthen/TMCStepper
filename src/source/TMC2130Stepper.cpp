@@ -62,6 +62,7 @@ void TMC2130Stepper::setSPISpeed(uint32_t speed) {
 __attribute__((weak))
 void TMC2130Stepper::switchCSpin(bool state) {
   digitalWrite(_pinCS, state);
+  delayMicroseconds(1);
 }
 
 __attribute__((weak))
